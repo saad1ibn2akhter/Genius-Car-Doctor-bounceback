@@ -11,8 +11,8 @@ const Navbar = () => {
     <li><Link to='/'>Contact</Link></li>
     </>
     return (
-        <div>
-            <div className="navbar bg-base-100">
+        <div className='bg-white'>
+            <div className="navbar bg-white text-black">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -26,7 +26,7 @@ const Navbar = () => {
     <img src={logo} alt="" />
     </Link>
   </div>
-  <div className="navbar-center hidden lg:flex">
+  <div className="navbar-center hidden lg:flex lg:items-center">
     <ul className="menu menu-horizontal px-1">
      {links}
     </ul>

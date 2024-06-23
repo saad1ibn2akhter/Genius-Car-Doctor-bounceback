@@ -45,23 +45,23 @@ const ServiceDetails = () => {
         <div className='py-8 max-w-7xl mx-auto'>
             <div className='max-w-7xl mx-auto '>
                 <div className='flex justify-center max-h-[175px] w-[100%] relative'>
-                    <img className='w-5/6  bg-gradient-to-t from-black to-[rgba(21,21,21,0)]' src="https://i.ibb.co/ydCbDN3/5555.jpg" alt="" />
-                    <div className='bg-gradient-to-t from-black to-[rgba(21,21,21,0)] absolute'>
-                        <h1 className=' bottom-0 left-0 top-full text-[36px] font-medium  ' >Car Servicing Support</h1>
-                        <button className='btn btn-secondary bg-orange-500 rounded-t-lg border-t-2 border-red-700'>Home / Service Details</button>
+                    <img className='w-5/6  ' src="https://i.ibb.co/ydCbDN3/5555.jpg" alt="" />
+                    <div className=' absolute'>
+                        <h1 className=' bottom-0 transform translate-y-20 text-white text-[36px] font-medium  ' >Car Servicing Support</h1>
+                        {/* <button className='btn btn-secondary bg-orange-500 rounded-t-lg border-t-2 border-red-700'>Home / Service Details</button> */}
                     </div>
                 </div>
                 <section className=''>
                     <div className='flex justify-between items-center'>
 
-                        {/* Right Sidebar */}
-
-                        <div className='w-1/2'>
-                        <RightSideBar matchedData={matchedData}></RightSideBar>
-                        </div>
                         {/* Left Sidebar */}
-                        <div className='w-1/2'>
+                        <div className='w-2/3'>
 
+                        </div>
+                         {/* Right Sidebar */}
+
+                         <div className='w-1/3'>
+                        <RightSideBar matchedData={matchedData}></RightSideBar>
                         </div>
                     </div>
                 </section>
