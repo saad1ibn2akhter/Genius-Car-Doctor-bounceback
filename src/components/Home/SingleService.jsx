@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 const SingleService = ({ service }) => {
     const { _id ,img,title ,description , price} = service;
@@ -11,7 +12,7 @@ const SingleService = ({ service }) => {
                     <p>{description.slice(0,100)}</p>
                     <h1 className='text-[18px] font-bold'>Price : <span className='text-yellow-600 font-bold'>£ {price}</span></h1>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                        <Link to={`/ServiceDetails/${_id}`} className="btn btn-primary"><button className='btn btn-primary'>Get Service</button></Link>
                     </div>
                 </div>
             </div>
