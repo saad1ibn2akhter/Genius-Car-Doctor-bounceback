@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import image from '../../assets/service.svg';
 import { useLoaderData, useParams } from 'react-router-dom';
 import RightSideBar from './RightSideBar';
+import LeftSideBar from './LeftSideBar';
 
 const useServiceData = (id) => {
     const [data, setData] = useState([]);
@@ -44,19 +45,19 @@ const ServiceDetails = () => {
     return (
         <div className='py-8 max-w-7xl mx-auto'>
             <div className='max-w-7xl mx-auto '>
-                <div className='flex justify-center max-h-[175px] w-[100%] relative'>
-                    <img className='w-5/6  ' src="https://i.ibb.co/ydCbDN3/5555.jpg" alt="" />
+                <div className='flex justify-center max-h-[175px] w-[100%] relative p-3 mb-16 rounded-3xl'>
+                    <img className='w-full  ' src="https://i.ibb.co/ydCbDN3/5555.jpg" alt="" />
                     <div className=' absolute'>
                         <h1 className=' bottom-0 transform translate-y-20 text-white text-[36px] font-medium  ' >Car Servicing Support</h1>
                         {/* <button className='btn btn-secondary bg-orange-500 rounded-t-lg border-t-2 border-red-700'>Home / Service Details</button> */}
                     </div>
                 </div>
                 <section className=''>
-                    <div className='flex justify-between items-center'>
+                    <div className='flex justify-between items-start space-x-10'>
 
                         {/* Left Sidebar */}
                         <div className='w-2/3'>
-
+                        <LeftSideBar ></LeftSideBar>
                         </div>
                          {/* Right Sidebar */}
 

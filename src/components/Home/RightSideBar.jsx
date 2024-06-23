@@ -4,7 +4,7 @@ import logo from '../../assets/logo.svg';
 
 const RightSideBar = ({ matchedData }) => {
     console.log('from the sidebar , sending the data', matchedData);
-    const {price} = matchedData;
+    // const {price} = matchedData;
     return (
         <div className='bg-white'>
             <div className='p-10 bg-gray-200 mb-6'>
@@ -82,8 +82,8 @@ const RightSideBar = ({ matchedData }) => {
                 </div>
             </div>
             <div className='text-center '>
-                <h1 className='text-[24px] font-bold'>Price £ {price}</h1>
-                <button className='btn btn-secondary bg-orange-600 text-white w-full'>Proceed to Checkout</button>
+                {/* <h1 className='text-[24px] font-bold'>Price £ {price }</h1> */}
+                <button className='btn btn-secondary bg-orange-600 text-white w-full'>Proceed Checkout</button>
             </div>
         </div>
     );
