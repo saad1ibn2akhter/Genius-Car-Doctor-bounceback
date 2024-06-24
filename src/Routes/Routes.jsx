@@ -3,6 +3,7 @@ import Main from "../Layout/Main";
 import Home from "../components/Home/Home";
 import Signup from "../components/Logib/Signup";
 import ServiceDetails from "../components/Home/ServiceDetails";
+import Checkout from "../components/Checkout/Checkout";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
           path:'/ServiceDetails/:id',
           element:<ServiceDetails></ServiceDetails>,
           loader:({params})=> fetch(`/services/${params.id}`)
+        },
+        {
+          path:'/Checkout/:id',
+          element:<Checkout></Checkout>,
+          loader:({params}) => fetch(`http://localhost:5000/service/${params.id}`)
         }
       ]
     },
