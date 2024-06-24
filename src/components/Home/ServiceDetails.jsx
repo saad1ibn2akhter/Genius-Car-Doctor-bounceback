@@ -42,7 +42,7 @@ const ServiceDetails = () => {
 
     const matchedData = data.find(d => d._id === id);
     console.log(matchedData);
-    const {title} = matchedData;
+    // const {title} = matchedData;
     const  handleSubmit = (e) =>{
         e.preventDefault();
         const form = new FormData(e.currentTarget);
@@ -58,11 +58,26 @@ const ServiceDetails = () => {
             customerName : name,
             email,
             date,
-            service : title,
+            // service : title,
             service_id : id,
             price : price
         }
         console.log(order);
+
+        fetch('http://localhost:5000/bookings',{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body : JSON.stringify(order)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.insertedId){
+                alert('a new data added to the database , congratulations !')
+            }
+        })
     }
     return (
         <div>
